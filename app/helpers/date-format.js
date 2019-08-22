@@ -2,13 +2,14 @@ import Ember from 'ember';
 
 export function dateFormat(params/*, hash*/) {
   var date = new Date(params[0]);
-  var day = date.getDate().toString();
+  var day =  date.getDate().toString();
   var dayName = date.getDay();
-  var month = date.getMonth();
+  var month = date.getMonth() + 1;
   var year = date.getFullYear().toString();
   return DayName(dayName) + " " + day + 
         ", " + monthName(month) + " " + year;
 }
+
 
 function DayName(x){
   switch(x){
