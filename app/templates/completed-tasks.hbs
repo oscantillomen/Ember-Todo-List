@@ -18,17 +18,16 @@
 
       <tbody id="TableBody">
         {{#each tasks as |task|}}
-        {{#unless task.completed}}
+        {{#if task.completed }}
         <tr>
           <th scope="row"><i class="material-icons">check_circle_outline</i></th>
           <td class="hand"> {{task.name}} </td>
           <td>{{date-format task.date}}</td>
           <td>
-            <i class="material-icons iDark" {{action "editTask" i }}>edit</i>
             <i class="material-icons" {{action "deleteTask" i}}>delete_outline</i>
           </td>
         </tr>
-        {{/unless}}
+        {{/if}}
         {{/each}}
       </tbody>
     </table>

@@ -6,8 +6,9 @@ const Router = Ember.Router.extend({
   rootURL: config.rootURL
 });
 
-Router.map(function() {
-  this.route('incompleted-tasks', { path: '/' } );
+Router.map(function () {
+  this.route('incompleted-tasks', { path: '/' });
+  this.route('completed-tasks', { path: '/completed-tasks' });
 });
 
 export default Router;
